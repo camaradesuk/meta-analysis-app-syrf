@@ -33,7 +33,8 @@ shinyUI(fluidPage(
       fileInput(inputId = "file", label = "Upload CSV File",
                 accept = c("text/csv", "text/comma-separated-values,text/plain", ".csv")
       ),
-      
+      list(HTML('<a href="example2.csv">Download example input file</a>'))
+           , br(),hr(),
       radioButtons(inputId = "CompareType", label = "Select comparison",
                    choices = list("Analysis of model" = "SC", 
                                   "Analysis of intervention" = "SCT"), 
